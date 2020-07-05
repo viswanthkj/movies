@@ -1,11 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {SafeAreaView, ScrollView} from 'react-native';
+import {SafeAreaView, ScrollView, Text} from 'react-native';
 import {
   CarosuelComponent,
   SeperatorList,
   DescriptionComponent,
 } from '../components/index';
+import styles from '../styles/styles';
 
 export default class Detail extends Component {
   constructor(props) {
@@ -19,11 +20,18 @@ export default class Detail extends Component {
   }
 
   render() {
-    const {movieProps} = this.props;
-    console.log('viswanth-movieProps', movieProps);
+    const {movieProps, genre} = this.props;
     return (
       <SafeAreaView>
-        <ScrollView contentContainerStyle={{borderWidth: 1, margin: 10}}>
+        <ScrollView contentContainerStyle={{margin: 10, paddingBottom: 15}}>
+          <Text
+            style={[
+              styles.genreDetailTitle,
+              {marginVertical: 5},
+            ]}>{`${genre} movies`}</Text>
+          <Text style={[styles.listDetailTitle, {marginVertical: 10}]}>
+            {movieProps.title}
+          </Text>
           <CarosuelComponent carouselData={movieProps.images} />
           <SeperatorList
             language={movieProps.language}

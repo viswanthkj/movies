@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {SafeAreaView, ScrollView} from 'react-native';
 import {MovieList, CarosuelComponent} from '../components/index';
@@ -21,7 +22,7 @@ export default class Dashboard extends Component {
     const {comedy, action, thriller, carouselItems} = this.state;
     return (
       <SafeAreaView>
-        <ScrollView>
+        <ScrollView contentContainerStyle={{paddingBottom: 15}}>
           <CarosuelComponent carouselData={carouselItems.posters} />
           <MovieList genre={comedy.genre} movieData={comedy.movies} />
           <MovieList genre={action.genre} movieData={action.movies} />

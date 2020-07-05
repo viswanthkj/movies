@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {View, Text, Dimensions} from 'react-native';
+import styles from '../styles/styles';
 
 const windowWidth = Dimensions.get('window').width;
 
@@ -13,20 +14,36 @@ export default class SeperatorList extends Component {
           style={{
             flex: 1,
             flexDirection: 'row',
-            justifyContent: 'space-between',
+            justifyContent: 'space-around',
             alignItems: 'flex-start',
             marginVertical: 5,
           }}>
-          <Text style={{textAlign: 'left', maxWidth: windowWidth / 4}}>
+          <Text
+            style={[
+              styles.genreTitle,
+              {textAlign: 'left', paddingHorizontal: 15},
+            ]}>
             Language
           </Text>
-          <Text style={{textAlign: 'left', maxWidth: windowWidth / 4}}>
+          <Text
+            style={[
+              styles.genreTitle,
+              {textAlign: 'left', paddingHorizontal: 15},
+            ]}>
             Releasing Year
           </Text>
-          <Text style={{textAlign: 'left', maxWidth: windowWidth / 4}}>
+          <Text
+            style={[
+              styles.genreTitle,
+              {textAlign: 'left', paddingHorizontal: 15},
+            ]}>
             Duration
           </Text>
-          <Text style={{textAlign: 'left', maxWidth: windowWidth / 4}}>
+          <Text
+            style={[
+              styles.genreTitle,
+              {textAlign: 'left', paddingHorizontal: 15},
+            ]}>
             Category
           </Text>
         </View>
@@ -35,14 +52,54 @@ export default class SeperatorList extends Component {
           style={{
             flex: 1,
             flexDirection: 'row',
-            justifyContent: 'space-between',
+            justifyContent: 'space-around',
             alignItems: 'flex-start',
             marginVertical: 5,
           }}>
-          <Text style={{maxWidth: windowWidth / 4}}>{language}</Text>
-          <Text style={{maxWidth: windowWidth / 4}}>{year}</Text>
-          <Text style={{maxWidth: windowWidth / 4}}>{duration}</Text>
-          <Text style={{maxWidth: windowWidth / 4}}>{category}</Text>
+          <Text
+            style={[
+              styles.listTitle,
+              {
+                textAlign: 'left',
+                maxWidth: windowWidth / 4,
+                paddingHorizontal: 15,
+              },
+            ]}>
+            {language}
+          </Text>
+          <Text
+            style={[
+              styles.listTitle,
+              {
+                textAlign: 'left',
+                maxWidth: windowWidth / 4,
+                paddingHorizontal: 15,
+              },
+            ]}>
+            {year}
+          </Text>
+          <Text
+            style={[
+              styles.listTitle,
+              {
+                textAlign: 'left',
+                maxWidth: windowWidth / 4,
+                paddingHorizontal: 15,
+              },
+            ]}>
+            {duration}
+          </Text>
+          <Text
+            style={[
+              styles.listTitle,
+              {
+                textAlign: 'left',
+                maxWidth: windowWidth / 4,
+                paddingHorizontal: 15,
+              },
+            ]}>
+            {category}
+          </Text>
         </View>
       </View>
     );

@@ -1,3 +1,4 @@
 import MovieList from './MovieList';
+import CarosuelComponent from './CarosuelComponent';
 
-export default MovieList;
+export {MovieList, CarosuelComponent};

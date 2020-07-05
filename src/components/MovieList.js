@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {Text, View, FlatList, TouchableOpacity, Image} from 'react-native';
+import {Actions} from 'react-native-router-flux';
 
 export default class MovieList extends Component {
   renderListItem = ({index, item}) => {
@@ -13,7 +14,11 @@ export default class MovieList extends Component {
           alignItems: 'center',
           margin: 10,
         }}
-        onPress={() => {}}>
+        onPress={() => {
+          Actions.detail({
+            movieProps: item,
+          });
+        }}>
         <Image
           style={{width: 100, height: 100}}
           source={{

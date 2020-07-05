@@ -1,0 +1,46 @@
+{
+  "genre":"Comedy",
+  "movies": 
+  [
+    {
+    "id":"0",
+    "title":"First Item",
+    "poster": "https://reactnative.dev/img/tiny_logo.png"
+    },
+    {
+      "id":"1",
+      "title":"First Item",
+      "poster": "https://reactnative.dev/img/tiny_logo.png"
+    },
+    {
+      "id":"2",
+      "title":"First Item",
+      "poster": "https://reactnative.dev/img/tiny_logo.png"
+    },
+    {
+      "id":"3",
+      "title":"First Item",
+      "poster": "https://reactnative.dev/img/tiny_logo.png"
+    },
+    {
+      "id":"4",
+      "title":"First Item",
+      "poster": "https://reactnative.dev/img/tiny_logo.png"
+    },
+    {
+      "id":"5",
+      "title":"First Item",
+      "poster": "https://reactnative.dev/img/tiny_logo.png"
+    },
+    {
+      "id":"6",
+      "title":"First Item",
+      "poster": "https://reactnative.dev/img/tiny_logo.png"
+    },
+    {
+      "id":"7",
+      "title":"First Item",
+      "poster": "https://reactnative.dev/img/tiny_logo.png"
+    }
+  ]  
+}

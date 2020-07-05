@@ -1,9 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {View, Text, Dimensions} from 'react-native';
+import {View, Text} from 'react-native';
 import styles from '../styles/styles';
-
-const windowWidth = Dimensions.get('window').width;
 
 export default class SeperatorList extends Component {
   render() {
@@ -12,7 +10,7 @@ export default class SeperatorList extends Component {
       <View style={{flex: 1, marginVertical: 20}}>
         <View
           style={{
-            flex: 1,
+            flex: 4,
             flexDirection: 'row',
             justifyContent: 'space-around',
             alignItems: 'flex-start',
@@ -21,36 +19,44 @@ export default class SeperatorList extends Component {
           <Text
             style={[
               styles.genreTitle,
-              {textAlign: 'left', paddingHorizontal: 15},
+              {
+                width: '25%',
+              },
             ]}>
             Language
           </Text>
           <Text
             style={[
               styles.genreTitle,
-              {textAlign: 'left', paddingHorizontal: 15},
+              {
+                width: '25%',
+              },
             ]}>
             Releasing Year
           </Text>
           <Text
             style={[
               styles.genreTitle,
-              {textAlign: 'left', paddingHorizontal: 15},
+              {
+                width: '25%',
+              },
             ]}>
             Duration
           </Text>
           <Text
             style={[
               styles.genreTitle,
-              {textAlign: 'left', paddingHorizontal: 15},
+              {
+                width: '25%',
+              },
             ]}>
             Category
           </Text>
         </View>
-        <View style={{borderBottomWidth: 1}} />
+        <View style={{borderBottomWidth: 1, borderBottomColor: '#ddd'}} />
         <View
           style={{
-            flex: 1,
+            flex: 4,
             flexDirection: 'row',
             justifyContent: 'space-around',
             alignItems: 'flex-start',
@@ -60,9 +66,7 @@ export default class SeperatorList extends Component {
             style={[
               styles.listTitle,
               {
-                textAlign: 'left',
-                maxWidth: windowWidth / 4,
-                paddingHorizontal: 15,
+                width: '25%',
               },
             ]}>
             {language}
@@ -71,9 +75,7 @@ export default class SeperatorList extends Component {
             style={[
               styles.listTitle,
               {
-                textAlign: 'left',
-                maxWidth: windowWidth / 4,
-                paddingHorizontal: 15,
+                width: '25%',
               },
             ]}>
             {year}
@@ -82,9 +84,7 @@ export default class SeperatorList extends Component {
             style={[
               styles.listTitle,
               {
-                textAlign: 'left',
-                maxWidth: windowWidth / 4,
-                paddingHorizontal: 15,
+                width: '25%',
               },
             ]}>
             {duration}
@@ -93,9 +93,7 @@ export default class SeperatorList extends Component {
             style={[
               styles.listTitle,
               {
-                textAlign: 'left',
-                maxWidth: windowWidth / 4,
-                paddingHorizontal: 15,
+                width: '25%',
               },
             ]}>
             {category}

@@ -5,8 +5,8 @@ import {Actions} from 'react-native-router-flux';
 import styles from '../styles/styles';
 
 export default class MovieList extends Component {
-  renderListItem = ({index, item}) => {
-    const {genre, movieData} = this.props;
+  renderListItem = ({item}) => {
+    const {genre} = this.props;
     return (
       <TouchableOpacity
         style={{
@@ -15,10 +15,12 @@ export default class MovieList extends Component {
           margin: 10,
         }}
         onPress={() => {
-          Actions.detail({
-            movieProps: item,
-            genre,
-          });
+          if (Actions.currentScene === 'dashboard') {
+            Actions.detail({
+              movieProps: item,
+              genre,
+            });
+          }
         }}>
         <Image
           style={{width: 100, height: 100}}
